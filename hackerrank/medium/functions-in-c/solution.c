@@ -1,20 +1,18 @@
 #include <stdio.h>
 
+int max_of_four(int a, int b, int c, int d) {
+    int max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+    if (d > max) max = d;
+    return max;
+}
+
 int main() {
-    int a, b;
-    float c, d;
-
-    // Read two integers from the first line
-    scanf("%d %d", &a, &b);
-
-    // Read two floating-point numbers from the second line
-    scanf("%f %f", &c, &d);
-
-    // Print sum and difference of integers
-    printf("%d %d\n", a + b, a - b);
-
-    // Print sum and difference of floats rounded to 1 decimal place
-    printf("%.1f %.1f\n", c + d, c - d);
-
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
     return 0;
 }
